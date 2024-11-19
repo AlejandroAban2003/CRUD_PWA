@@ -50,33 +50,6 @@ nav ul li a:hover {
   border-radius: 50%;
 }
 
-/* Modal styles */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 500px;
-}
-
-.close-btn {
-  float: right;
-  font-size: 24px;
-  cursor: pointer;
-}
-
 /* Formulario */
 form {
   margin: 20px 0;
@@ -130,52 +103,6 @@ ul#event-list li {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   text-align: left;
   color: #ffffff;
-  display: flex;
-  flex-direction: column;
-}
-
-ul#event-list li h3 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: #ff6347;
-}
-
-ul#event-list li p {
-  margin: 5px 0;
-}
-
-ul#event-list li span {
-  font-size: 0.9rem;
-  color: #ccc;
-}
-
-/* Botones de acción dentro de cada evento */
-ul#event-list li .event-actions {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 10px;
-}
-
-ul#event-list li .event-actions button {
-  background-color: #4682b4;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  color: #fff;
-  margin-left: 10px;
-}
-
-ul#event-list li .event-actions button:hover {
-  background-color: #4169e1;
-}
-
-ul#event-list li .event-actions button.delete {
-  background-color: #ff6347;
-}
-
-ul#event-list li .event-actions button.delete:hover {
-  background-color: #ff4500;
 }
 
 /* Estilos responsivos */
@@ -196,71 +123,4 @@ ul#event-list li .event-actions button.delete:hover {
   .logo {
     margin-bottom: 10px;
   }
-
-  ul#event-list li {
-    padding: 15px;
-  }
-
-  ul#event-list li h3 {
-    font-size: 1.2rem;
-  }
-
-  ul#event-list li .event-actions button {
-    padding: 8px;
-  }
-
-  form input[type="text"],
-  form input[type="date"],
-  form input[type="time"],
-  form textarea {
-    width: 90%;
-    max-width: none; /* Deshabilitar el ancho máximo en pantallas pequeñas */
-  }
-}
-
-/* Estilos para los botones de acción */
-.event-actions {
-  margin-top: 10px;
-  display: flex;
-  justify-content: flex-end; /* Alinear botones a la derecha */
-}
-
-.edit-btn {
-  background-color: #0cd80f; /* Color del botón de editar */
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  margin-left: 10px; /* Espacio entre botones */
-}
-
-.edit-btn:hover {
-  background-color: #4169e1; /* Color al pasar el mouse */
-}
-
-.delete-btn {
-  background-color: #ff6347; /* Color del botón de eliminar */
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.delete-btn:hover {
-  background-color: #ff4500; /* Color al pasar el mouse */
-}
-
-.btn-Modal {
-  background-color: #ff4500; /* Color del botón de editar */
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  margin-bottom: 20px;
 }
