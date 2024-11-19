@@ -1,8 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const serverless = require('serverless-http'); // Paquete para convertir Express en Serverless
 const app = express();
 
-let events = [];  // Almacenamiento temporal
+let events = []; // Almacenamiento temporal
 
 // Middleware para parsear el cuerpo de las solicitudes
 app.use(bodyParser.json());
@@ -40,17 +41,6 @@ app.delete('/api/events/:id', (req, res) => {
   res.status(204).end();
 });
 
-// Iniciar el servidor
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Servidor en ejecución en el puerto ${PORT}`);
-});
-
-if ('serviceWorker' in navigator && 'SyncManager' in window) {
-  navigator.serviceWorker.ready.then(registration => {
-    registration.sync.register('sync-events')
-      .then(() => console.log('Sincronización en segundo plano registrada'))
-      .catch(err => console.error('Error al registrar la sincronización:', err));
-  });
-}
-
+// Exporta el manejador para Vercel
+module.exports = app; // Para pruebas locales
+module.exports.handler = serverless(app); // Para entorno serverless
